@@ -7,6 +7,45 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+
+
+
+
+
+Немного о проекте
+
+
+Делаю Интерент магазин совместно с Laravel И Vue
+
+На данный момент сделана 1 таблица items, генерация через фейкер + фабрика
+
+Подключен vue и сделан вывод данных
+
+начал делать фунцкионал добавления элементов в Корзину
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
