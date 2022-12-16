@@ -40,18 +40,25 @@ Route::match(array('GET', 'POST'), '/cart/add', function(Request $request)
         $request->session()->forget('cart');
     }
 
-    if($request->item_id){
+    $item_id = $request->item_id;
+
+    if($item_id){
+
+        $item_info = \App\Models\Item::where('id', $item_id)->get()[0];
 
         $item = array(
-            'item_id' => $request->item_id,
-            'items_name' => "ITEM_NAME_FROM_DB",
+            'id' => $item_id,
+            'name' => $item_info->name,
+            'price' => $item_info->price,
+            'image' => $item_info->image,
+            'quantity' =>  $request->quantity,
         );
 
-        $request->session()->put('cart.items.' .  $request->item_id  , $item);
-
-        $cart = session('cart');
+        $request->session()->put('cart.items.' .  $item_id , $item);
 
     }
+
+    $cart = session('cart');
 
     return $cart;
 });

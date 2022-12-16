@@ -2,8 +2,14 @@
 
 
 
+
+
 <div id="app">
-    <example-component :featured_items="{{ json_encode($featured_items) }}" />
+
+
+    <featured-items-component :featured_items="{{ json_encode($featured_items) }}" />
+
+
 </div>
 
 <section>

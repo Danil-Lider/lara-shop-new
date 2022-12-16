@@ -386,58 +386,12 @@
                             </button>
                             <div class="dropdown-menu cart2 drop-home-1 check-out-home-1">
 
-                                <div class="cart-2">
-                                    <div class="check-out">
-                                        <div class="img-cart">
-                                            <a href="#"><img src="images/img27.jpg" alt="img"></a>
-                                        </div>
-                                        <div class="para-cart">
-                                            <p><a href="#">Crepe Jacket With Pompom</a></p>
-                                            <h4>$36.00</h4>
-                                            <del>$42.00</del>
-                                            <br>
-                                            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="check-out">
-                                        <div class="img-cart">
-                                            <a href="#"><img src="images/img28.jpg" alt="img"></a>
-                                        </div>
-                                        <div class="para-cart">
-                                            <p><a href="#">Animal Print Sweatshirt</a></p>
-                                            <h4>$36.00</h4>
-                                            <del>$42.00</del>
-                                            <br>
-                                            <a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="check-out bd-bt">
-                                        <div class="img-cart">
-                                            <a href="#"><img src="images/img29.jpg" alt="img"></a>
-                                        </div>
-                                        <div class="para-cart">
-                                            <p><a href="#">Knit Cardigan</a></p>
-                                            <br>
-                                            <h4>$36.00</h4>
-                                            <del>$42.00</del>
-                                            <br>
-                                            <a href="#"><i class="fa fa-trash-o st" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
+                                <div id="cart">
+                                    <cart-component :items="{{ json_encode(session('cart')) }}" />
                                 </div>
-                                <div>
-                                    <div class="check-out2">
-                                        <div class="total">
-                                            <p>Total</p>
-                                            <span>$ 689.8</span>
-                                        </div>
-                                        <div class="check">
-                                            <a href="#">check out</a>
-                                        </div>
-                                    </div>
-                                </div>
+
+
+
                             </div>
 
                         </div>

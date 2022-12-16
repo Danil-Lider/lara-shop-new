@@ -68,6 +68,27 @@
 
 </template>
 
+<style>
+.zoa-quickview {
+    cursor:pointer;
+}
+.product-button-group {
+    opacity: 1 !important;
+    visibility: visible !important;
+    bottom: -100% !important;
+}
+
+.zoa-btn {
+    opacity: 1 !important;
+    visibility: visible !important;
+    -webkit-transform: translateY(-20px) !important;
+    transform: translateY(-20px) !important;
+}
+
+.overlay-img {
+    opacity: 1 !important;
+}
+</style>
 <script>
     export default {
         data: function (){
@@ -79,7 +100,7 @@
             'featured_items'
         ],
         mounted() {
-            console.log('Component mounted.')
+            console.log('Example Component mounted.')
             console.log(this.featured_items)
         },
         methods: {
@@ -96,7 +117,8 @@
 
                 const postBody = {
                     item_id: id,
-                    method: 'add_in_cart'
+                    quantity: 1,
+                    method: 'add_in_cart',
                 }
 
                 const str = JSON.stringify(postBody);
