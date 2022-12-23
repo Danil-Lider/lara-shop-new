@@ -4,19 +4,24 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+
+import FeaturedItemsComponent from "./components/FeaturedItemsComponent";
+
 import CartComponent from "./components/CartComponent";
 
-
-
-
-
-
+import ItemComponent from "./components/ItemComponent";
 
 
 
 require('./bootstrap');
 
 window.Vue = require('vue').default;
+
+
+
+import {store} from './store/index';
+
+Vue.prototype.$store = store;
 
 /**
  * The following block of code may be used to automatically register your
@@ -29,18 +34,36 @@ window.Vue = require('vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('featured-items-component', require('./components/FeaturedItemsComponent.vue').default);
+// export const bus = new Vue();
 
+
+// Vue.component('featured-items-component', require('./components/FeaturedItemsComponent.vue').default);
+// Vue.component('cart-component', require('./components/CartComponent.vue').default);
+// Vue.component('item-component', require('./components/ItemComponent.vue').default);
 
 const app = new Vue({
     el: '#app',
+    store: store,
+    components: {
+        FeaturedItemsComponent,
+        ItemComponent
+    }
 });
-
-Vue.component('cart-component', require('./components/CartComponent.vue').default);
 
 const cart = new Vue({
     el: '#cart',
+    store: store,
+    components: {
+        CartComponent
+    }
 });
+
+//
+// var item = {
+//     title: 'lo2131l',
+// }
+
+// store.commit('addToCart', item);
 
 // ALSO
 

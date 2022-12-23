@@ -380,27 +380,12 @@
                             <button type="submit" id="search-btn"><i class="ion-ios-search-strong"></i></button>
                         </form>
                     </div>
-                    <div class="date3 dropdown">
-                        <div class="date mycart">
-                            <button class="fa fa-shopping-bag dropdown-toggle" type="button" data-toggle="dropdown">
-                            </button>
-                            <div class="dropdown-menu cart2 drop-home-1 check-out-home-1">
 
-                                <div id="cart">
-                                    <cart-component :items="{{ json_encode(session('cart')) }}" />
-                                </div>
-
-
-
-                            </div>
-
-                        </div>
-                        <div class="para-a a4">
-                            <h4><a href="#">My Cart.</a></h4>
-                            <p>01 </p>
-                            <span>/ $150.00</span>
-                        </div>
+                    <div id="cart">
+                        <cart-component :items="{{ json_encode(session('cart')) }}" />
                     </div>
+
+
                 </div>
             </div>
         </div>
